@@ -137,20 +137,17 @@ hi GutenTags    ctermfg=000 ctermbg=047 guifg=#000000 guibg=#00ff5f
 hi Modified     ctermfg=000 ctermbg=208 guifg=#000000 guibg=#ff8700
 
 " Set status line
-set statusline=
-set statusline.="%#Mode# %{colorstatus#mode()} "                "Mode
-set statusline.="%#FilePath# %<%F "                             "File+path
-set statusline.="%#GitStatus#%( %{colorstatus#fugitive()} %)"   "Git Branch
-set statusline.="%#Modified#%( %{colorstatus#modified()} %)"    "Modified
-set statusline.="%#ReadOnly#%( %{colorstatus#readonly()} %)"    "Read Only
-set statusline.="%=%*"                                          "Separation point between left and right aligned items
-set statusline.="%#FileType# %{colorstatus#filetype()} "        "FileType
-set statusline.="%#Encoding# %{(&fenc!=''?&fenc:&enc)} "        "Encoding
-set statusline.="%#FileFormat# %{colorstatus#fileformat()} "    "FileFormat (dos/unix..)
-set statusline.="%#Status# %p%% "                               "Percentage of file
-set statusline.="%#Row# %{colorstatus#line()}%3l:%-2v "         "Row/Column
-set statusline.="%#Linter# %{colorstatus#ale()} "               "Linter Status
-set statusline.="%#GutenTags#%( %{gutentags#statusline()} %)"   "GutenTag Status
-
-
-
+let &statusline=""
+let &statusline.="%#Mode# %{colorstatus#mode()} "                "Mode
+let &statusline.="%#FilePath# %<%F "                             "File+path
+let &statusline.="%#GitStatus#%( %{colorstatus#fugitive()} %)"   "Git Branch
+let &statusline.="%#Modified#%( %{colorstatus#modified()} %)"    "Modified
+let &statusline.="%#ReadOnly#%( %{colorstatus#readonly()} %)"    "Read Only
+let &statusline.="%=%*"                                          "Separation point between left and right aligned items
+let &statusline.="%#FileType# %{colorstatus#filetype()} "        "FileType
+let &statusline.="%#Encoding# %{(&fenc!=''?&fenc:&enc)} "        "Encoding
+let &statusline.="%#FileFormat# %{colorstatus#fileformat()} "    "FileFormat (dos/unix..)
+let &statusline.="%#Status# %p%% "                               "Percentage of file
+let &statusline.="%#Row# %{colorstatus#line()}%3l:%-2v "         "Row/Column
+let &statusline.="%#Linter# %{colorstatus#ale()} "               "Linter Status
+let &statusline.="%#GutenTags#%( %{gutentags#statusline()} %)"   "GutenTag Status
