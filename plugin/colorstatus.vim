@@ -126,7 +126,7 @@ endfunction
 " Highlight sections
 hi FilePath     ctermfg=015 ctermbg=088 guifg=#ffffff guibg=#870000
 hi GitStatus    ctermfg=015 ctermbg=018 guifg=#ffffff guibg=#000087
-hi FileType     ctermfg=015 ctermbg=232 guifg=#ffffff guibg=#080808
+hi FileType     ctermfg=015 ctermbg=014 guifg=#ffffff guibg=#00ffff  
 hi Encoding     ctermfg=000 ctermbg=228 guifg=#000000 guibg=#ffff87
 hi FileFormat   ctermfg=000 ctermbg=119 guifg=#000000 guibg=#87ff5f
 hi Row          ctermfg=015 ctermbg=033 guifg=#ffffff guibg=#0087ff
@@ -143,11 +143,11 @@ let &statusline.="%#FilePath# %<%F "                             "File+path
 let &statusline.="%#GitStatus#%( %{colorstatus#fugitive()} %)"   "Git Branch
 let &statusline.="%#Modified#%( %{colorstatus#modified()} %)"    "Modified
 let &statusline.="%#ReadOnly#%( %{colorstatus#readonly()} %)"    "Read Only
-let &statusline.="%=%*"                                          "Separation point between left and right aligned items
+let &statusline.="%=%0*"                                         "Separation point between left and right aligned items
 let &statusline.="%#FileType# %{colorstatus#filetype()} "        "FileType
 let &statusline.="%#Encoding# %{(&fenc!=''?&fenc:&enc)} "        "Encoding
 let &statusline.="%#FileFormat# %{colorstatus#fileformat()} "    "FileFormat (dos/unix..)
 let &statusline.="%#Status# %p%% "                               "Percentage of file
-let &statusline.="%#Row# %{colorstatus#line()}%3l:%-2v "         "Row/Column
+let &statusline.="%#Row# %{colorstatus#line()} %3l:%-2v "        "Row/Column
 let &statusline.="%#Linter# %{colorstatus#ale()} "               "Linter Status
 let &statusline.="%#GutenTags#%( %{gutentags#statusline()} %)"   "GutenTag Status
