@@ -1,0 +1,46 @@
+*colorstatus.txt*  A colorful statusline
+
+Author:  Panagiotis Dimopoulos
+License: MIT License
+Repository: https://github.com/panosdim/vim-colorstatus
+
+CONTENTS					*colorstatus-contents*
+
+Introduction				|colorstatus-introduction|
+Configuration               |colorstatus-configuration|
+Contact                     |colorstatus-contact|
+
+==============================================================================
+INTRODUCTION                                    *colorstatus-introduction*
+
+A colorful statusline for vim with support for Nerd Fonts and WebDevIcons.
+Also supports ALE and GutenTags.
+
+------------------------------------------------------------------------------
+CONFIGURATION                                   *colorstatus-configuration*
+
+g:colorstatus#nerdfont                         *g:colorstatus#nerdfont*
+		Enable or disable the use of Nerd Fonts glyph icons in statusline.
+        In order to work you must install and configure Vim to use Nerd Fonts.
+        For more info about Nerd Fonts https://nerdfonts.com
+        Default: >
+            let g:colorstatus#nerdfont = 0 
+<
+        0 - Don't use Nerd Fonts glyph icons
+        1 - Use Nerd Fonts glyph icons.
+
+g:colorstatus#vimdevicons                       *g:colorstatus#vimdevicons*
+		Enable or disable the use of VimDevIcons glyph icons in statusline.
+        In order to work you must install and configure Vim to use VimDevIcons.
+        For more info visit https://github.com/ryanoasis/vim-devicons
+        Default: >
+            let g:colorstatus#vimdevicons = 0 
+<
+        0 - Don't use VimDevIcons glyph icons
+        1 - Use VimDevIcons glyph icons.       
+                
+------------------------------------------------------------------------------
+CONTACT                                         *colorstatus-contact*
+
+If you need anything to ask or report a bug please don't hesitate to contact
+me via mail at panosdim@gmail.com
