@@ -24,6 +24,15 @@ if exists('*ale#engine#IsCheckingBuffer')
     augroup END
 endif
 
+" Update status line when GutenTags is working
+if exists('*gutentags#statusline')
+    augroup MyGutentagsStatusLineRefresher
+        autocmd!
+        autocmd User GutentagsUpdating call colorstatus#tags()
+        autocmd User GutentagsUpdated call colorstatus#tags()
+    augroup END
+endif
+
 " Check configuration options
 let s:vimdevicons = get(g:, 'colorstatus#vimdevicons', 0)
 let s:nerdfont = get(g:, 'colorstatus#nerdfont', 0)
@@ -131,6 +140,8 @@ endfunction
 " Shows GutenTags status
 function! colorstatus#tags() abort
     if exists('*gutentags#statusline')
+        let &ro = &ro " Use this in order to force status line update
+        return gutentags#statusline()
     endif
     return ''
 endfunction
